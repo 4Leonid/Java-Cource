@@ -25,7 +25,7 @@ public class HW1 {
                     taskOne();;
                     break;
                 case 3:
-                    taskThree();;
+                    simpleCalculator();;
                     break;
                 case 0:
                     System.out.println("Завершение работы приложения.");
@@ -64,6 +64,9 @@ public class HW1 {
     }
 
     static void taskTwo() {
+        /*
+         * Вывести все простые числа от 1 до 1000
+         */
         for (int i = 2; i <= 1000; i++) {
             boolean flag = true;
             for (int j = 2; j < i; j++) {
@@ -78,7 +81,10 @@ public class HW1 {
             }
     }
 
-    static void taskThree() {
+    static void simpleCalculator() {
+        /*
+         * Реализовать простой калькулятор
+         */
         System.out.print("Input operation sign ");
         String sign = scanner.nextLine();
         System.out.print("Input first number ");
