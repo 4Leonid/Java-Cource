@@ -5,12 +5,21 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class MyUtilities {
     static Scanner iScanner = new Scanner(System.in);
     static Random random = new Random();
+
+    public static void Divider(char symbol, int length) {
+        StringBuilder builder = new StringBuilder(length);
+        for (int i = 0; i < length; i++) {
+            builder.append(symbol);
+        }
+        System.out.println(builder);
+    }
 
     public static int inputNaturelNumber(String msg) {
         int num = 0;
@@ -153,6 +162,19 @@ public class MyUtilities {
         }
         return result.toString();
 
+    }
+
+    public static LinkedList<Integer> createRandomLinkedList(int size, int minValue, int maxValue){
+        LinkedList<Integer> result = new LinkedList<>();
+        if (minValue > maxValue) {
+            int tmp = minValue;
+            minValue = maxValue;
+            maxValue = tmp;
+        }  
+        for (int i = 0; i < size; i++) {
+            result.add(randomIntNumber(minValue, maxValue));
+        }
+        return result;
     }
 
 
